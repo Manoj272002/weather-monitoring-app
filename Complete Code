@@ -6,7 +6,7 @@ import time
 from datetime import datetime, timedelta
 from collections import Counter
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 API_KEY = "c7d64e40bcf89ba40805da20d18d07f9"  # Replace with your actual API key
 
