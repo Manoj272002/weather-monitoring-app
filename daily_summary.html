@@ -1,0 +1,36 @@
+daily_summary.html - Daily Summary Page
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Weather Summaries</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Weather Summaries</h1>
+        <table>
+            <tr>
+                <th>City</th>
+                <th>Date</th>
+                <th>Avg Temp (°C)</th>
+                <th>Max Temp (°C)</th>
+                <th>Min Temp (°C)</th>
+                <th>Dominant Condition</th>
+            </tr>
+            {% for city, summary in summaries.items() %}
+                {% if summary %}
+                    <tr>
+                        <td>{{ city }}</td>
+                        <td>{{ summary[1] }}</td>
+                        <td>{{ summary[2] }}</td>
+                        <td>{{ summary[3] }}</td>
+                        <td>{{ summary[4] }}</td>
+                        <td>{{ summary[5] }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
